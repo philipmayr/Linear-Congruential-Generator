@@ -9,7 +9,7 @@ int yield_pseudo_random_number_sequence(int modulus,
                                         int multiplier, 
                                         int increment, 
                                         int seed, 
-                                        vector<int>& pseudo_random_number_sequence, 
+                                        vector<long long>& pseudo_random_number_sequence, 
                                         int pseudo_random_number_sequence_length)
 {
     // sequence[index] = ((sequence[index - 1] * multiplier) + increment) % modulus 
@@ -43,7 +43,7 @@ int main()
     int seed = 1;
     
     int pseudo_random_number_sequence_length = 12;
-    vector<int> pseudo_random_number_sequence(pseudo_random_number_sequence_length);
+    vector<long long> pseudo_random_number_sequence(pseudo_random_number_sequence_length);
     
     yield_pseudo_random_number_sequence(modulus, 
                                         multiplier, 
