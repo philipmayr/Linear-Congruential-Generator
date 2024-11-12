@@ -1,7 +1,6 @@
 // Linear Congruential Generator
 
 #include <bits/stdc++.h>
-#include <time.h>
 
 using namespace std;
 
@@ -20,9 +19,7 @@ int yield_pseudo_random_number_sequence(int modulus,
     pseudo_random_number_sequence[0] = seed;
     
     for (int index = 1; index < pseudo_random_number_sequence_length; index++)
-    {
         pseudo_random_number_sequence[index] = ((pseudo_random_number_sequence[index - 1] * multiplier) + increment) % modulus;
-    }
     
     return 0;
 }
@@ -53,9 +50,7 @@ int main()
                                         pseudo_random_number_sequence_length);
                                         
     for (int index = 0; index < pseudo_random_number_sequence_length; index++)
-    {
         cout << pseudo_random_number_sequence[index] << " ";
-    }
     
     return 0;
 }
